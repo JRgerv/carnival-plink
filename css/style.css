@@ -27,7 +27,7 @@
 }
 #timer{
   position: relative;
-  top: 645px;
+  top: 180px;
   color: white;
   font-size: 40px;
 }
@@ -51,11 +51,12 @@
     animation-direction: alternate;
 }
 .duck{
+  margin-top: 100px;
   position: relative;
   animation-name: bottomTarget;
-    animation-duration: 2.3s;
-    animation-iteration-count: 10000;
-    animation-direction: alternate;
+  animation-duration: 2.3s;
+  animation-iteration-count: 10000;
+  animation-direction: alternate;
 }
 body{
   min-height: 1000px;
