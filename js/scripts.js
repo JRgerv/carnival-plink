@@ -27,11 +27,22 @@ function tick(){
 
 
 // Hide target on click
-function clickTarget(){
+function hitTarget(){
   $('img').click(function(){
+    ammo-=1;
     $(this).toggle(250);  
-    console.log('log')
+    console.log(ammo);
   });
 };
-clickTarget();
+hitTarget();
+
+function missTarget(){
+  $('#shootBox').click(function(){
+    ammo -= 1;
+    console.log(ammo);
+  }).children().click(function(e) {
+  return false;
+  });
+};
+missTarget();
 
