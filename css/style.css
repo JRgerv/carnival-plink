@@ -1,0 +1,58 @@
+#gameBox{
+  margin:0 auto;
+  background: url("../img/carnival-border.png");
+  height: 700px;
+  width: 900px;
+  background-size: 100% 100%;
+/*  opacity: 0.2;*/
+
+}
+#hideBox{
+/*  text-align: center;*/
+  margin: 0 auto;
+  z-index:2;
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color:white;
+}
+#content{
+  margin: 200px auto;
+  width: 40%;
+  max-width: 500px;
+  border: 2px dashed white;
+  padding-bottom: 3em;
+}
+#timer{
+  position: relative;
+  top: 645px;
+  color: white;
+  font-size: 40px;
+}
+#start{
+  position: relative;
+  left: 20px;
+}
+#shootBox{
+  position: absolute;
+  top: 143px;
+  left: 142px;
+  width: 742px;
+  height: 472px;
+}
+body{
+  min-height: 1000px;
+  text-align: center;
+
+}
+ul{
+  list-style: none;
+}
+h2 {
+  position:relative;
+  left: 20px;
+}
