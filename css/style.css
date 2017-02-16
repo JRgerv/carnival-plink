@@ -4,8 +4,6 @@
   height: 700px;
   width: 900px;
   background-size: 100% 100%;
-/*  opacity: 0.2;*/
-
 }
 #hideBox{
 /*  text-align: center;*/
@@ -38,11 +36,26 @@
   left: 20px;
 }
 #shootBox{
+  background: black;
   position: absolute;
   top: 143px;
   left: 142px;
   width: 742px;
   height: 472px;
+}
+.bull{
+    position: relative;
+    animation-name: topTarget;
+    animation-duration: 2s;
+    animation-iteration-count: 10000;
+    animation-direction: alternate;
+}
+.duck{
+  position: relative;
+  animation-name: bottomTarget;
+    animation-duration: 2.3s;
+    animation-iteration-count: 10000;
+    animation-direction: alternate;
 }
 body{
   min-height: 1000px;
@@ -55,4 +68,13 @@ ul{
 h2 {
   position:relative;
   left: 20px;
+}
+@keyframes topTarget {
+    from {left: -30px;}
+    to {left:50px;}
+}
+
+@keyframes bottomTarget {
+    from {left: 50px;}
+    to {left:-30px;}
 }

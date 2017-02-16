@@ -3,13 +3,11 @@ var ammo = 15;
 var interval;
 
 
-$(document)
-
 $('#start').click(function(){
-  $('#hideBox').fadeTo("slow", 0,function(){});
-  
+  // $('#hideBox').fadeTo("slow", 0,function(){});
+    $('#hideBox').css("display","none").css('z-index','-3');
   var interval = setInterval(tick, 1000);
- 
+
 });
 
 
@@ -25,5 +23,15 @@ function tick(){
       // STOP GAME
     gameOver();
   }
-}
+};
+
+
+// Hide target on click
+function clickTarget(){
+  $('img').click(function(){
+    $(this).toggle(250);  
+    console.log('log')
+  });
+};
+clickTarget();
 
