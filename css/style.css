@@ -79,3 +79,15 @@ h2 {
     from {left: 50px;}
     to {left:-30px;}
 }
+#ammoCount{
+  display:block;
+  position: relative;
+  height:400px;
+  width: 25px;
+  left:-90px;
+  top: -300px;
+
+}
+#ammoCount img{
+  padding-top: -5px;
+}
