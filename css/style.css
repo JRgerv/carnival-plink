@@ -49,6 +49,7 @@
   left: 20px;
 }
 #shootBox{
+  cursor: url("../img/targetcursor.png"), auto;
   text-align: left;
   background: black;
   position: relative;

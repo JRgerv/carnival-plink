@@ -63,9 +63,9 @@ function removeAmmo(){
 
 function gameOver(){
     console.log('game over');
-    console.log('Score: '+(score+time)+' Points');
+    console.log('Score: '+(score+(time/2))+' Points');
     clearInterval(interval);
-    $('#scoreBox').text('Score: '+score+' Points');
+    $('#scoreBox').text('Score: '+(score+(time/2))+' Points');
     $('#gameBox').css({opacity: 0.1});
     $('.duck').off();
     $('.bull').off();
