@@ -7,26 +7,18 @@ var interval;
 $('#start').click(function(){
   // $('#hideBox').fadeTo("slow", 0,function(){});
     $('#hideBox').css("display","none").css('z-index','-3');
-  var interval = setInterval(tick, 1000);
+   interval = setInterval(tick, 1000);
    // $('#ammoCount').append('<img src="/img/ammo.png">');
   addAmmo();
 });
 
 
 function tick(){
-  
-  
-
   if(time>= 1){
     time -= 1;
-
   $('#timer').text(time);
 }else{
-    // GAME OVER AND STOP INTERVAL
-      // stop interval
-    clearInterval(interval);
-    //   // STOP GAME
-    // gameOver();
+    gameOver();
   }
 };
 
@@ -34,18 +26,18 @@ function tick(){
 // Hide target on click
 function hitTarget(){
   $('img').click(function(){
-    ammo-=1;
     score+=1;
     $(this).toggle(250);  
     console.log(ammo);
+    removeAmmo();
   });
 };
 hitTarget();
 
 function missTarget(){
   $('#shootBox').click(function(){
-    ammo -= 1;
     console.log(ammo);
+    removeAmmo();
   }).children().click(function(e) {
   return false;
   });
@@ -57,8 +49,24 @@ function addAmmo(){
     $('#ammoCount').append('<img class="count'+i+'" src="../carnival-shooter/img/ammo.png">');
   }
 }
+
 function removeAmmo(){
-  
-  console.log('.count'+(ammo-1));
-};
+  ammo-=1;
+  $('#ammoCount img').last().remove();
+  if(ammo<=0){
+    gameOver();
+  }
+}
+
+
+function gameOver(){
+    console.log('game over');
+    console.log('Score: '+(score+time)+' Points');
+    clearInterval(interval);
+    $('#scoreBox').text('Score: '+score+' Points');
+    $('#gameBox').css({opacity: 0.1});
+    $('.duck').off();
+    $('.bull').off();
+    $('#shootBox').off();
+}
 
