@@ -27,8 +27,10 @@ function tick(){
 function hitTarget(){
   $('img').click(function(){
     score+=1;
-    $(this).toggle(250);  
+    $(this).fadeTo(2, 0);
+    $(this).off();  
     console.log(ammo);
+    console.log(score);
     removeAmmo();
   });
 };
@@ -68,5 +70,6 @@ function gameOver(){
     $('.duck').off();
     $('.bull').off();
     $('#shootBox').off();
+    $('#winBox').css('display','block').css('z-index','10');
 }
 
