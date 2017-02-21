@@ -48,7 +48,7 @@ missTarget();
 
 function addAmmo(){
   for (var i = 0; i < ammo; i++) {
-    $('#ammoCount').append('<img src="../carnival-shooter/img/ammo.png">');
+    $('#ammoCount').append('<img src="img/ammo.png">');
   }
 }
 
