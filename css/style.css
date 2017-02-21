@@ -1,6 +1,8 @@
 body{
   min-height: 1000px;
   text-align: center;
+  background: url("../img/state-fair-carnival.jpg");
+  background-size: cover;
 }
 ul{
   list-style: none;
@@ -110,8 +112,8 @@ button{
 
 }
 @keyframes topTarget {
-    from {left: 0px;}
-    to {left:100px;}
+    from {left: 10px;}
+    to {left:150px;}
 }
 /*animation*/
 @keyframes bottomTarget {
