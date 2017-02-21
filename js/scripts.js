@@ -14,7 +14,7 @@ $('#start').click(function(){
 
 function tick(){
   if(time-- > 0){
-  $('#timer').text("0:"+time);
+  $('#timer').text(":"+time);
   if(time%4 == 0){
     $('.bird').each(function(index){
       if(birdOrder[showBird] == index) $(this).css('opacity','1');
