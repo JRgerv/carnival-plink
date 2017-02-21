@@ -1,4 +1,4 @@
-var time = 30;
+var time = 20;
 var ammo = 15;
 var score = 0;
 var interval;
@@ -15,7 +15,7 @@ $('#start').click(function(){
 function tick(){
   if(time-- > 0){
   $('#timer').text(":"+time);
-  if(time%4 == 0){
+  if(time%3 == 0){
     $('.bird').each(function(index){
       if(birdOrder[showBird] == index) $(this).css('opacity','1');
       else $(this).css('opacity','0');
@@ -62,7 +62,7 @@ function removeAmmo(){
 
 function gameOver(){
     clearInterval(interval);
-    $('#scoreBox').text('Score: '+(score+(time/2))+' Points');
+    $('#scoreBox').text('Score: '+(score+(time/2)+ammo)+' Points');
     $('#gameBox').css({opacity: 0.1});
     $('.duck').off();
     $('.bull').off();
