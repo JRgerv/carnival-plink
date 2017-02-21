@@ -1,4 +1,5 @@
 #gameBox{
+  position: relative;
   margin:0 auto;
   background: url("../img/carnival-border.png");
   height: 700px;
@@ -64,14 +65,33 @@
     animation-duration: 1.9s;
     animation-iteration-count: 10000;
     animation-direction: alternate;
+    width:120px;
+    height:120px;
 }
 .duck{
-  margin-top: 100px;
+  width:100px;
+  height:120px;
+  margin-bottom: 40px;
   position: relative;
   animation-name: bottomTarget;
   animation-duration: 1.5s;
   animation-iteration-count: 10000;
   animation-direction: alternate;
+}
+.bird{
+  position: relative;
+  animation-timing-function: ease-in-out;
+  animation-name: birdTargetLeft;
+
+  animation-duration: 0.8s;
+  animation-iteration-count: 10000;
+  animation-duration: alternate;
+  padding-right: 90px;
+  padding-left: 70px;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+
 }
 @keyframes topTarget {
     from {left: 0px;}
@@ -82,6 +102,14 @@
     from {left: 82px;}
     to {left:0;}
 }
+@keyframes birdTargetLeft {
+  from {left: 0px;}
+    to {left:100px; }
+}
+/*@keyframes birdTargetTop {
+  from {margin-top: : 0px;}
+    to {margin-top: :100px; }
+}*/
 body{
   min-height: 1000px;
   text-align: center;
