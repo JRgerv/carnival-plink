@@ -1,3 +1,17 @@
+body{
+  min-height: 1000px;
+  text-align: center;
+}
+ul{
+  list-style: none;
+}
+h2 {
+  position:relative;
+  left: 20px;
+}
+button{
+  font-size: 24px;
+}
 #gameBox{
   position: relative;
   margin:0 auto;
@@ -7,7 +21,7 @@
   background-size: 100% 100%;
 }
 #hideBox{
-
+  font-size: 24px;
   margin: 0 auto;
   z-index:2;
   display: block;
@@ -27,6 +41,7 @@
   padding-bottom: 3em;
 }
 #winBox{
+  font-size: 24px;
   display:none;
   margin: 0 auto;
   z-index:-1;
@@ -37,7 +52,6 @@
   right: 0;
   background: rgba(0, 0, 0, 0.7);
   color:white;
-
 }
 #timer{
   position: relative;
@@ -106,23 +120,6 @@
   from {left: 0px;}
     to {left:100px; }
 }
-/*@keyframes birdTargetTop {
-  from {margin-top: : 0px;}
-    to {margin-top: :100px; }
-}*/
-body{
-  min-height: 1000px;
-  text-align: center;
-
-}
-ul{
-  list-style: none;
-}
-h2 {
-  position:relative;
-  left: 20px;
-}
-
 #ammoCount{
   display:block;
   position: absolute;
@@ -130,7 +127,6 @@ h2 {
   width: 25px;
   padding-left:20px;
   top: 170px;
-
 }
 #ammoCount img{
   padding-top: -5px;
